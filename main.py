@@ -6,7 +6,7 @@ import logging
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from bot.bot import TunedFlanBot  # Changed from LightFlanBot to TunedFlanBot
+from bot.bot import TunedFlanBot  
 
 # Setup logging
 os.makedirs('logs', exist_ok=True)
@@ -18,7 +18,7 @@ logging.basicConfig(
 
 def main():
     try:
-        bot = TunedFlanBot()  # Changed from LightFlanBot to TunedFlanBot
+        bot = TunedFlanBot()  
         bot.run()
     except Exception as e:
         logging.error(f"Failed to initialize bot: {str(e)}")
